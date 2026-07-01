@@ -1,0 +1,21 @@
+logistic_cloaking = {
+    user_scope = fleet
+    scope = self
+
+    context_menu_name = FLEET_VIEW_ACTIVATE_CLOAK
+    tooltip = FLEET_VIEW_ACTIVATE_CLOAK_DESC
+    icon = GFX_fleet_action_button_toggle_cloak_large
+    icon_selected = GFX_fleet_action_button_toggle_cloak_off_large
+
+    button_visible = {
+        always = yes
+    }
+
+    possible = {
+        custom_tooltip = {
+            fail_text = FLEET_SHIPS_CANT_CLOAK
+            has_cloaking_strength > 0
+        }
+    }
+
+}

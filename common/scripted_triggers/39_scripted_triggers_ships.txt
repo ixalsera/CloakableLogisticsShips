@@ -1,0 +1,6 @@
+ship_uses_logistics_cloaks = {
+    OR = {
+        is_ship_size = nomads_constructor
+        is_ship_size = nomads_engineer_vessel
+    }
+}

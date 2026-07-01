@@ -1,0 +1,10 @@
+﻿l_english:
+LOGISTIC_CLOAKING_EMPTY:0 "$SCIENCE_CLOAKING_EMPTY$"
+LOGISTIC_CLOAKING_1:0 "$CLOAKING_1$"
+LOGISTIC_CLOAKING_2:0 "$CLOAKING_2$"
+LOGISTIC_CLOAKING_3:0 "$CLOAKING_3$"
+LOGISTIC_CLOAKING_DARK_MATTER:0 "$CLOAKING_DARK_MATTER$"
+LOGISTIC_CLOAKING_PSI:0 "$CLOAKING_PSI$"
+
+logistic_cloaking_components:0 "$science_cloaking_components$"
+logistic_cloaking_components_desc:0 "$science_cloaking_components_desc$"
