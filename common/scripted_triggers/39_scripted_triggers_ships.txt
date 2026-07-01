@@ -4,3 +4,29 @@ ship_uses_logistics_cloaks = {
         is_ship_size = nomads_engineer_vessel
     }
 }
+
+logistics_ship_can_cloak = {
+    AND = {
+        is_cloaked = no
+        has_cloaking_strength > 0
+        NOT = {
+            has_fleet_flag = logistics_cloak_cooldown
+        }
+    }
+}
+
+logistics_ship_activate_button_visible = {
+    AND = {
+        # Cloaking is only valid with First Contact; the actual cloaking tech is gated itself, we just need to hide the button a la Science Vessels
+        has_first_contact_dlc = yes
+        is_cloaked = no
+    }
+}
+
+logistics_ship_deactivate_button_visible = {
+    AND = {
+        # Cloaking is only valid with First Contact; the actual cloaking tech is gated itself, we just need to hide the button a la Science Vessels
+        has_first_contact_dlc = yes
+        is_cloaked = yes
+    }
+}

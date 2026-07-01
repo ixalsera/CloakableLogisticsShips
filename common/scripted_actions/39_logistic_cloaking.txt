@@ -1,4 +1,4 @@
-logistic_cloaking = {
+logistic_cloaking_activate = {
     user_scope = fleet
     scope = self
 
@@ -8,14 +8,43 @@ logistic_cloaking = {
     icon_selected = GFX_fleet_action_button_toggle_cloak_off_large
 
     button_visible = {
-        always = yes
+        logistics_ship_activate_button_visible = yes
     }
 
-    possible = {
+    button_clickable = {
         custom_tooltip = {
             fail_text = FLEET_SHIPS_CANT_CLOAK
             has_cloaking_strength > 0
         }
+        custom_tooltip = {
+            fail_text = FLEET_SHIPS_CANT_CLOAK_COOLDOWN
+            NOT = {
+                has_fleet_flag = logistics_cloak_cooldown
+            }
+        }
     }
 
+    wait = no # Cloaking can be enabled mid-flight
+
+    on_started = on_logistics_activate_cloak
+    required_progress = 0.0
+}
+
+logistic_cloaking_deactivate = {
+    user_scope = fleet
+    scope = self
+
+    context_menu_name = FLEET_VIEW_DEACTIVATE_CLOAK
+    tooltip = FLEET_VIEW_DEACTIVATE_CLOAK_DESC
+    icon = GFX_fleet_action_button_toggle_cloak_off_large
+    icon_selected = GFX_fleet_action_button_toggle_cloak_large
+
+    button_visible = {
+        logistics_ship_deactivate_button_visible = yes
+    }
+
+    wait = no # Cloaking can be enabled mid-flight
+
+    on_started = on_logistics_deactivate_cloak
+    required_progress = 0.0
 }

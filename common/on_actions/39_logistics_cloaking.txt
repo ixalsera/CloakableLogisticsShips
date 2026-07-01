@@ -1,0 +1,11 @@
+on_logistics_activate_cloak = {
+    events = {
+        logistics_cloak.1
+    }
+}
+
+on_logistics_deactivate_cloak = {
+    events = {
+        logistics_cloak.2
+    }
+}

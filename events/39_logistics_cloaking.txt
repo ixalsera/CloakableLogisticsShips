@@ -1,0 +1,25 @@
+namespace = logistics_cloak
+
+fleet_event = {
+    id = logistics_cloak.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_cloaking_active = yes
+    }
+}
+
+fleet_event = {
+    id = logistics_cloak.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        set_cloaking_active = no
+        set_timed_fleet_flag = {
+            flag = logistics_cloak_cooldown
+            days = 120
+        }
+    }
+}
