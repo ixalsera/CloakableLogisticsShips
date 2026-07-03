@@ -1,4 +1,4 @@
-version="4.4.*"
+version="4.4.0"
 tags={
 	"Technologies"
 	"Spaceships"
