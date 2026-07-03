@@ -1,0 +1,66 @@
+namespace = nomads
+
+# Fired by on_harvest_resources
+# We need to override this to specifically trigger our custom opinion modifier
+carrier_event = {
+	id = nomads.4100
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			every_owned_ship = {
+				save_event_target_as = arkship
+			}
+			if = {
+				limit = {
+					is_civilian = yes
+				}
+				root = {
+					arkship_harvest_resources_effect = {
+						DURATION = @logistic_harvest_resources_duration
+						TARGET = event_target:arkship
+						EFFECT = add_resource_to_local_stockpile
+					}
+				}
+			}
+			else = {
+				root = {
+					arkship_harvest_resources_effect = {
+						DURATION = @arkship_harvest_resources_duration
+						TARGET = event_target:arkship.controller
+						EFFECT = add_resource
+					}
+				}
+			}
+		}
+		# Decrease opinion of system owner when uncloaked
+		if = {
+			limit = {
+				exempt_from_harvest_resources_opinion_reduction_trigger = no
+				has_deposit = yes
+			}
+			if = {
+				limit = {
+					event_target:arkship = {
+                    	is_cloaked = yes
+                	}
+				}
+				space_owner? = {
+					add_opinion_modifier = {
+						modifier = opinion_arkship_harvested_resources_cloaked
+						who = event_target:arkship.controller
+					}
+				}
+			}
+			else = {
+				space_owner? = {
+					add_opinion_modifier = {
+						modifier = opinion_arkship_harvested_resources
+						who = event_target:arkship.controller
+					}
+				}
+			}
+		}
+	}
+}

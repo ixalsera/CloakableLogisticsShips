@@ -8,3 +8,5 @@ LOGISTIC_CLOAKING_PSI:0 "$CLOAKING_PSI$"
 
 logistic_cloaking_components:0 "$science_cloaking_components$"
 logistic_cloaking_components_desc:0 "$science_cloaking_components_desc$"
+
+opinion_arkship_harvested_resources_cloaked: "Sneakily $opinion_arkship_harvested_resources$"

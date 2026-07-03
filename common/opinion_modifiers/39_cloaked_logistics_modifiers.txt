@@ -1,0 +1,19 @@
+# Identical to non-cloaked-suffixed except with 50% mod
+opinion_arkship_harvested_resources_cloaked = {
+	opinion = {
+		base = @arkship_harvest_resources_opinion_penalty
+        modifier = {
+			mult = 0.5
+		}
+	}
+
+	accumulative = yes
+
+	min = -1000
+	decay = {
+		base = 1.25
+		modifier = {
+			factor = value:negative_opinion_decay_rate
+		}
+	}
+}
