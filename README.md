@@ -23,7 +23,7 @@ Added benefits? Logistics ships can now pass through hostile space to return you
 
 ## Compatibility
 
-This mod patches the following vanilla files, so it may conflict with other mods that touch the same things:
+This mod patches the following keys from vanilla files, so it may conflict with other mods that touch the same things:
 
 - The `nomads_constructor` and `nomads_engineer_vessel` ship sizes (adds the cloaking component set and the two fleet actions)
 - The `nomads.4100` event fired by `on_harvest_resources` (checks the harvesting ship's cloak state to pick the right opinion modifier)
@@ -36,3 +36,5 @@ Subscribe on the Steam Workshop, or copy this folder into your Stellaris `mod` d
 
 - Cloaking is a full fleet action. I can't find any way to make it a state toggle like for other vessels. This means it _*WILL*_ cancel your current fleet order(s) unless you queue it.
 - Decloak button doesn't show the time remaining on the cooldown. It's a minor thing and if I find a way to fix it I will, but otherwise it's not stopping anything.
+- Technically, you can get to -2000 opinion from harvesting, now. So I've made things somewhat worse? But it's probably a non-issue. Probably. (Sneakily Harvesting decays at double the speed and both modifiers decay concurrently)
+- Due to the way logistics ship designs are generated (at game start) and that they are not a designable ship, this mod will not function completely for existing saves.
