@@ -30,7 +30,7 @@ This mod patches the following keys from vanilla files, so it may conflict with 
 
 ## Installation
 
-Subscribe on the Steam Workshop, or copy this folder into your Stellaris `mod` directory and enable it from the in-game mod launcher.
+Subscribe on the Steam Workshop, or clone this repo into your Stellaris `mod` directory and enable it from the launcher.
 
 ## Known Issues
 
@@ -38,3 +38,7 @@ Subscribe on the Steam Workshop, or copy this folder into your Stellaris `mod` d
 - Decloak button doesn't show the time remaining on the cooldown. It's a minor thing and if I find a way to fix it I will, but otherwise it's not stopping anything.
 - Technically, you can get to -2000 opinion from harvesting, now. So I've made things somewhat worse? But it's probably a non-issue. Probably. (Sneakily Harvesting decays at double the speed and both modifiers decay concurrently)
 - Due to the way logistics ship designs are generated (at game start) and that they are not a designable ship, this mod will not function completely for existing saves.
+
+# Contributing
+
+If you have any problems with the mod, please open an Issue so I can get to looking at it. Alternatively, if you know how to fix it yourself, pull requests are always welcome!
