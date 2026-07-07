@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_braz_por:
  LOGISTIC_CLOAKING_EMPTY:0 "$SCIENCE_CLOAKING_EMPTY$"
  LOGISTIC_CLOAKING_1:0 "$CLOAKING_1$"
  LOGISTIC_CLOAKING_2:0 "$CLOAKING_2$"
@@ -9,4 +9,4 @@
  logistic_cloaking_components:0 "$science_cloaking_components$"
  logistic_cloaking_components_desc:0 "$science_cloaking_components_desc$"
 
- opinion_arkship_harvested_resources_cloaked: "Sneakily $opinion_arkship_harvested_resources$"
+ opinion_arkship_harvested_resources_cloaked: "Sorrateiramente $opinion_arkship_harvested_resources$"
